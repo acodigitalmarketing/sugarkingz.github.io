@@ -1,0 +1,91 @@
+<html>
+<head>
+     <title>Sugar Kingz</title>
+<hr>
+</head>
+<body>
+<style>
+body {
+background-color: #FF0000
+}
+
+h1 {
+        color: #8181F7;
+}
+.resize {
+    width: 700px;
+    height: auto;
+}
+.facebook {
+    width: 100px;
+    height: auto;
+}
+.insta{
+    width: 100px;
+    height: auto;
+}
+</style>
+<center><h1>Sugar Kingz</h1></center>
+<hr>
+<center>
+<img src="logo.jpg"/></center>
+<hr>
+<center>
+<p>American style diner in 54 Albion Street Morley,Leeds</p>
+<p>We are open 7 days a week 9.00am-5.00pm</p>
+<p>This is our menu below</p>
+<hr>
+<img class="resize" src="menu.jpg"/>
+<hr>
+<p>We are rated 4.9 out of 5 on Facebook based on 110 opinions</p>
+<p>More than 1500 likes on our facebook page.</p>
+<p>Some of our reviews include;</p>
+<p>"Great afternoon for my daughters birthday treat. Emma and all the staff are fantastic. A massive thank you xx" by SHELL RODD</p>
+<p>"Just had 2 Sunday dinners delivered (and a cheeky banana and Nutella crepe for me !) and I can definitely recommend. 
+It was hot and certainly enjoyed by both of us - was not disappointed 
+Will definitely be becoming a regular!" By AMANDA SIMMONS</p>
+<p>"My children love going to sugar Kingz so friendly and helpful great place just to take time out" By KAYLEIGH RICHARDSON</p>
+<p>And many more reviews like this</p>
+<p>You can place an order in many ways such as;</p>
+<p>Facebook,Whatsapp, or calling either 0113 252 9231 or 0730 535 3976</p>
+<p>Click on the icons</p>
+<hr>
+<a href="https://www.facebook.com/sugarkingzleeds/?ref=page_internal">
+
+   <img class="facebook" src="facebook.jpg"/>
+</a>
+<a href="<a href="https://www.instagram.com/sugarkingzmorley/">
+
+   <img class="insta" src="insta.jpg"/>
+</a>
+<hr>
+<p>Sign up below to get offers from Sugar Kingz</p>
+<?php
+$to = "cobanemma@gmail.com
+$subject = "registration for offers";
+$name  = $_POST('name');
+$email = $_POST('email');
+$comment = $_POST('comment');
+$headers .= "content-type: text/html:\r\n";
+$headers .= "from: $email";
+mail($to, $subject, $comment);
+echo "Email has been sent! Thank you $name";
+?>
+<form action="website.html" method="post">
+<p>Name:
+<input name="name" type="text">
+</p>
+<p>email:
+<input type="text" name="email" id="email">
+</p>
+<p>message:
+<textarea name="comment" id="comment" cols="45" rows="5"></textarea>
+</p>
+<p> submit
+<input type="submit" name="submit" id="submit" value="submit">
+</p>
+</form>
+</center>
+
+</body>
+</html
